@@ -84,3 +84,14 @@ body {
 }
 
 
+@media screen and (max-width:768px){
+  .header{
+grid-template-rows: auto auto;
+grid-template-columns: 1fr;
+text-align: center;
+place-items: center;
+  }
+  .bottom{
+    font-size: 0.95rem;
+  }
+}
