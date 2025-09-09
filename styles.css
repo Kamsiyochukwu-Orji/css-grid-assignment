@@ -7,7 +7,8 @@
 :root {
   --BG-COLOR: #dad7cdff;
   --IMG-BG: #a3b18aff;
-  --HOOBIES-BG: #588157ff;
+  --HOOBIES-BG: #a3b18a;
+  --PARA-BG: #dad7cd;
   --BORDER-COLOR: #3a5a40ff;
   --TEXT-COLOR: #344e41ff;
 }
@@ -61,37 +62,38 @@ body {
 }
 
 /* -------- BOTTOM SECTION -------- */
+
 .bottom {
-  grid-area: bt;
-  background-color: var(--HOOBIES-BG);
-  color: #fff;
-  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* hobbies smaller, lorem bigger */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.hobbies {
+  background-color: var(--HOOBIES-BG); 
+  padding: 10px;
   border-radius: 8px;
 }
 
-.bottom p {
-  margin-bottom: 10px;
-  font-weight: bold;
+.lorem {
+  background-color: var(--PARA-BG); 
+  padding: 10px;
+  border-radius: 8px;
 }
 
-.bottom ul {
-  padding-left: 20px;
+ul li{
+  list-style: none;
 }
-
-.bottom li {
-  list-style-type: disc;
-  margin-bottom: 5px;
-}
-
-
-@media screen and (max-width:768px){
-  .header{
-grid-template-rows: auto auto;
-grid-template-columns: 1fr;
-text-align: center;
-place-items: center;
+@media screen and (max-width: 768px) {
+  .header {
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    text-align: center;
+    place-items: center;
   }
-  .bottom{
+  .bottom {
     font-size: 0.95rem;
+    grid-template-columns: 1fr;
   }
 }
